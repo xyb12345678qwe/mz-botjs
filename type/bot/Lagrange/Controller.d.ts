@@ -1,0 +1,23 @@
+export interface ControllerLagrange {
+    ws: WebSocket | null;
+
+    reply(group_id: number | string, msg: string): void;
+
+    replyPrivate(user_id: number | string, msg: string): void;
+    getFriendList(): Promise<any>;
+    getGroupList(): Promise<any>;
+}
+
+export declare class controllerLagrange implements ControllerLagrange {
+    ws: WebSocket | null;
+
+    constructor();
+
+    reply(group_id: number | string, msg: string): void;
+
+    replyPrivate(user_id: number | string, msg: string): void;
+    getFriendList(): Promise<any>;
+    getGroupList(): Promise<any>;
+}
+
+export const ControllerLagrange: controllerLagrange;
